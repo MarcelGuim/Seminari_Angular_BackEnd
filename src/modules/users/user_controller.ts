@@ -36,6 +36,8 @@ export const getUserByIdHandler = async (req: Request, res: Response) => {
     }
 };
 export const updateUserHandler = async (req: Request, res: Response) => {
+    console.log("1")
+    console.log(req);
     try {
         const data = await updateUser(req.params.id, req.body);
         res.status(200).json(data);

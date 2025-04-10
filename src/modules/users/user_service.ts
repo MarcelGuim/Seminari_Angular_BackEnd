@@ -18,6 +18,7 @@ export const getUserById = async (id: string) => {
 };
 
 export const updateUser = async (id: string, updateData: Partial<IUser>) => {
+    console.log("2");
     return await User.updateOne({ _id: id }, { $set: updateData });
 };
 
